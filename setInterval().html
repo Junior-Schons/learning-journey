@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>setTimeOut()  e  setInterval()</h1>
+
+    <h2>setTimeOut() chama uma funçao em um tempo especificado</h2>
+    <h3>espere 5 segundos:</h3>
+    <p id="teste_1"></p>
+<p>--------------------------------------------</p>
+
+    <h2>setInterval() chama uma uma função em um intervalo de tempo</h2>
+    <h3>A cada 3 segundos como no exemplo a seguir!</h3>
+    <p id="teste_2"></p>
+    <script>
+        const myTimeout = setTimeout(myGreeting, 5000);
+
+        function myGreeting(){
+            document.getElementById('teste_1').innerHTML = '<h1>Happy Birthday!</h1>'
+        };
+
+
+        const myInterval = document.getElementById('teste_2');
+        setInterval(function(){myInterval.innerHTML += 'Ola Mundo!'},3000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    
+    <form action="">
+        <input type="text" placeholder="digite um numero" id="numero">
+        <input type="button" value="enviar" id="enviar">
+    </form>
+
+    <p id="teste">esperando</p>
+    <script>
+        /*
+tambem temos os metodos para converter variaveis em numeros:
+metodo Number()
+metodo parseInt()
+metodo parseFloat()
+*/
+            var numero = document.getElementById('numero');
+
+            var enviar = document.getElementById('enviar');
+
+            var teste = document.getElementById('teste');
+
+            enviar.addEventListener('click', send);
+            
+            function send(){
+                var nmber = Number(numero.value)//os dados recebidos por formularios sao recebidos como abjetos sendo necessario a conversao
+                teste.innerHTML = nmber;
+            }
+
+
+
+    </script>
+</body>
+</html>

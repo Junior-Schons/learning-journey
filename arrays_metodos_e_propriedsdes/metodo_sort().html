@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="teste"></p>
+
+    <button onclick="myFunction()">ordem alfabetica</button>
+    <button onclick="myFunction2()">ordem numerica</button>
+
+    <script>
+        const pontos = [40, 100, 29, 3, 8, 22];
+        document.getElementById('teste').innerHTML = pontos;
+
+ function myFunction(){
+    pontos.sort();
+    document.getElementById('teste').innerHTML = pontos;
+}
+
+function myFunction2(){
+    pontos.sort(function(a, b){return a - b});
+    document.getElementById('teste').innerHTML = pontos;
+}
+    </script>
+</body>
+</html>
